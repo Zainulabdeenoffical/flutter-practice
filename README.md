@@ -1,5 +1,6 @@
-# Flutter Practice Projects
 
+# Flutter Practice Projects
+<!-- Animated Flutter Icon GIF --> <p align="center"> <img src="https://github.com/orestesgaolin/animated_flutter_logo/raw/master/animation.gif" alt="Animated Flutter Icon" height="150"> </p>
 [![Flutter](https://img.shields.io/badge/Flutter-3.27.4%20Stable-blue?logo=flutter)](https://flutter.dev) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 A curated collection of Flutter projects designed for learning, experimentation, and exploring best practices in modern app development. This repository showcases various practice projects and experimental setups that cater to both beginners and seasoned developers.
