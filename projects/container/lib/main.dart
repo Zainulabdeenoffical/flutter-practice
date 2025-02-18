@@ -32,15 +32,22 @@ class MyHomePage extends StatelessWidget {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: const Text("Flutter Container"),
       ),
-        body: Center(
-          child: Container(
-            width: 200,
-            height: 200,
-            color: Colors.blue,
-            child: Text("hello world"),
-          ),
-        ),
-
+       
+      body:
+      // Center(
+        //   child: Container(
+        //     width: 200,
+        //     height: 200,
+        //     color: Colors.blue,
+        //     child: Text("hello world"),
+        //   ),
+        // ),
+        Text('Hello World',style: TextStyle(
+          fontSize: 35,
+          color :Colors.black,
+            fontWeight  :FontWeight.bold,
+          backgroundColor: Colors.lightBlue
+        ),)
 
     );
   }
