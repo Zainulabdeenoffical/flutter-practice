@@ -42,12 +42,39 @@ class MyHomePage extends StatelessWidget {
         //     child: Text("hello world"),
         //   ),
         // ),
-        Text('Hello World',style: TextStyle(
-          fontSize: 35,
-          color :Colors.black,
-            fontWeight  :FontWeight.bold,
-          backgroundColor: Colors.lightBlue
-        ),)
+        // Text('Hello World',style: TextStyle(
+        //   fontSize: 35,
+        //   color :Colors.black,
+        //     fontWeight  :FontWeight.bold,
+        //   backgroundColor: Colors.lightBlue
+        // ),)
+      // TextButton(
+      //   child: Text("clikc here"),
+      //   onPressed: ()
+      //   {
+      //     print("hello clikced");
+      //   },
+      //   onLongPress: ()
+      //   {
+      //     print("long pressed");
+      //   },
+      //
+      // )
+      // ElevatedButton(
+      //   child: Text("Log in"),
+      //   onPressed: ()
+      //   {
+      //     print("button Clicked");
+      //   },
+      // )
+
+      OutlinedButton(
+        child: Text("outlined button"),
+        onPressed: ()
+        {
+          print(" button clicked");
+        },
+      )
 
     );
   }
