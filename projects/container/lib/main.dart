@@ -68,12 +68,51 @@ class MyHomePage extends StatelessWidget {
       //   },
       // )
 
-      OutlinedButton(
-        child: Text("outlined button"),
-        onPressed: ()
-        {
-          print(" button clicked");
+      // OutlinedButton(
+      //   child: Text("outlined button"),
+      //   onPressed: ()
+      //   {
+      //     print(" button clicked");
+      //   },
+      // )
+
+      // Row(
+      //   // mainAxisAlignment: MainAxisAlignment.spaceAround,
+      //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      //   // crossAxisAlignment: crossAxisAlignment.center,
+      //   children: [
+      //     Text('my',style: TextStyle(fontSize: 23),),
+      //     Text('name', style: TextStyle(fontSize: 25),),
+      //     Text('is' ,style: TextStyle(fontSize: 25),),
+      //     Text('zain',style: TextStyle(fontSize: 25),),
+      //     ElevatedButton(onPressed: (){
+      //
+      //     },child: Text('click'),)
+      //   ],
+      // )
+
+      Center(
+        child: InkWell(
+        onTap: (){
+          print("hello world tapped");
         },
+          onDoubleTap: ()
+          {
+            print("hello double tapped");
+          },
+          child: Container(
+            height: 200,
+            width: 200,
+            color: Colors.blueAccent,
+            child:InkWell
+              (
+              onTap: ()
+                {
+                  print ("Text tapped");
+                },
+                child: Center(child: Text("Click here",style: TextStyle(fontSize: 26,fontWeight:FontWeight.bold ), ))),
+          ),
+        ),
       )
 
     );
