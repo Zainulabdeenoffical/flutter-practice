@@ -52,7 +52,10 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: Theme
+            .of(context)
+            .colorScheme
+            .inversePrimary,
         title: const Text("Flutter Container"),
       ),
       body: Center(
@@ -63,11 +66,14 @@ class _MyHomePageState extends State<MyHomePage> {
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: toggleTorch,
-              child: Text(isTorchOn ? "Turn Off Flashlight" : "Turn On Flashlight"),
+              child: Text(
+                  isTorchOn ? "Turn Off Flashlight" : "Turn On Flashlight"),
             ),
           ],
         ),
       ),
     );
   }
+
+
 }

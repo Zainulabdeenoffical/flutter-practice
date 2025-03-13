@@ -22,11 +22,11 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF0A174E),
+      backgroundColor: Colors.deepPurple,
       appBar: AppBar(
         title: const Text("Login Page"),
         centerTitle: true,
-        backgroundColor:  Color(0xFFF5D042),
+        backgroundColor: Colors.white
       ),
       body: Center(
         child: Column(
@@ -37,7 +37,7 @@ class LoginPage extends StatelessWidget {
              SizedBox(height: 30),
             const CircleAvatar(
               radius: 50,
-              backgroundImage: AssetImage('images/profilepic.jpg'),
+              backgroundImage: AssetImage('images/udemy.png'),
             ),
             const SizedBox(height: 30),
             const TextField(
@@ -45,7 +45,7 @@ class LoginPage extends StatelessWidget {
                 labelText: "Email Address",
                 hintText: "zain@gmail.com",
                 border: OutlineInputBorder(),
-                fillColor: Colors.yellow,
+                fillColor: Colors.white,
                 filled: true,
               ),
             ),
@@ -55,7 +55,7 @@ class LoginPage extends StatelessWidget {
                 labelText: "Password",
                 hintText: "zain1234",
                 border: OutlineInputBorder(),
-                fillColor: Colors.yellow,
+                fillColor: Colors.white,
                 filled: true,
               ),
             ),
@@ -66,13 +66,15 @@ class LoginPage extends StatelessWidget {
                 style: TextStyle(fontSize: 18, color: Colors.black),
               ),
               style: ElevatedButton.styleFrom(
-                fixedSize: const Size(150, 50),
-                backgroundColor: const Color(0xFFF5D042),
+                fixedSize:  Size(400, 50),
+                backgroundColor: Colors.white,
               ),
               onPressed: () {
                 // Define your button action here.
               },
             )
+
+
           ],
         ),
       ),
