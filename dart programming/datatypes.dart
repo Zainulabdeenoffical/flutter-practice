@@ -12,5 +12,7 @@ void main() {
 
   bool isalive = true;
   print(isalive);
-  
+
+  String name = "zain";
+  print("My name is ${name}");
 }

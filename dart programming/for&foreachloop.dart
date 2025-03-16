@@ -12,4 +12,9 @@ void main() {
   for (String fruit in fruits) {
     print(fruit);
   }
+  List<int> numbers = [10, 20, 30, 40, 50];
+
+  numbers.forEach((int num) {
+    print(num);
+  });
 }

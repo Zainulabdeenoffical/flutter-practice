@@ -7,4 +7,6 @@ void main() {
   first['Second'] = 'life is ';
   first['Third'] = 'best ';
   print(first);
+
+  List<dynamic> name = [1, 2, 3, "Zain"];
 }

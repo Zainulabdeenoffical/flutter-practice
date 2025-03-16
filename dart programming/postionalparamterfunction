@@ -48,4 +48,13 @@ void printData(List<dynamic> args) {
   for (var arg in args) {
     print(arg);
   }
+<<<<<<< HEAD
+  void greet(String name, int age) {  
+  print("Hello, $name! You are $age years old.");  
+}  
+
+greet("Zain", 25); 
+
+=======
+>>>>>>> 6ac1233e6889fd0b9adcae45704a27f643db9cc9
 }
