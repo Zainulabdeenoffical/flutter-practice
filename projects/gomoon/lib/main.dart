@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gomoon/pages/home_page.dart';
 
 void main ()
 {
@@ -14,9 +15,10 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: 'GoMOOn',
      theme: ThemeData(scaffoldBackgroundColor:Color.fromRGBO(31, 31, 31, 1.0),),
-      home:  Scaffold(
+      home: // Scaffold(
         //backgroundColor: Color.fromRGBO(31, 31, 31, 1.0),
-      ),
+     // ),
+      Home()
     );
   }
 }
