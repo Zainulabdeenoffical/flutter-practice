@@ -16,7 +16,15 @@ class Home extends StatelessWidget {
       height: _deviceHeight,
       width: _devicewidth,
       padding: EdgeInsets.symmetric(horizontal: _devicewidth * 0.05),
-      child: _pageTitle(),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisSize: MainAxisSize.max,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          _pageTitle(),
+          _dropdownwediget(),
+        ],
+      ),
     )));
   }
 
@@ -40,22 +48,24 @@ class Home extends StatelessWidget {
   }
 
   Widget _dropdownwediget() {
-    List <DropdownMenuItem<String>> _items = [
+    List<DropdownMenuItem<String>> _items = [
       'My  name is',
       'Zain Ul Abideen'
     ].map((e) {
-      return DropdownMenuItem(child: Text(e), value: e,);
-    }).toList();
-  }
+      return DropdownMenuItem(
+        child: Text(e),
+        value: e,
 
+      );
+    }).toList();
 
     return Container(
-
-  child: DropdownButton(
-     onChanged: (_){},
-     items: items,
-
+      child: DropdownButton(
+        onChanged: (_){},
+        items: _items,
       ),
     );
   }
+
+
 }
