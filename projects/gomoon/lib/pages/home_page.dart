@@ -48,21 +48,33 @@ class Home extends StatelessWidget {
   }
 
   Widget _dropdownwediget() {
-    List<DropdownMenuItem<String>> _items = [
-      'My  name is',
-      'Zain Ul Abideen'
-    ].map((e) {
-      return DropdownMenuItem(
-        child: Text(e),
-        value: e,
-
-      );
-    }).toList();
-
+    List<String> _items = [
+      'Zain Web station',
+      'Abdullah Station'
+    ];
     return Container(
+      padding: EdgeInsets.symmetric(horizontal: _devicewidth * 0.05),
+      width: _devicewidth,
+      decoration: BoxDecoration(
+        color: Color.fromRGBO(53, 53, 53, 1.0),
+            borderRadius: BorderRadius.circular(10)
+      ),
       child: DropdownButton(
+
+        value: _items.first,
         onChanged: (_){},
-        items: _items,
+        items: _items.map((e) {
+          return DropdownMenuItem(
+            child: Text(e),
+            value: e,
+
+          );
+        }).toList(),
+        underline: Container(),
+        dropdownColor: const Color.fromRGBO(53, 53, 53, 1.0),
+        style: TextStyle(color: Colors.white,
+        ),
+
       ),
     );
   }
