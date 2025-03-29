@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gomoon/Widgets/custom_Widget_dropdownbutton.dart';
 
 class Home extends StatelessWidget {
   late double _deviceHeight, _devicewidth;
@@ -23,6 +24,7 @@ class Home extends StatelessWidget {
         children: [
           _pageTitle(),
           _dropdownwediget(),
+          _travelerinfromationwidget()
         ],
       ),
     )));
@@ -48,35 +50,21 @@ class Home extends StatelessWidget {
   }
 
   Widget _dropdownwediget() {
-    List<String> _items = [
-      'Zain Web station',
-      'Abdullah Station'
-    ];
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal: _devicewidth * 0.05),
-      width: _devicewidth,
-      decoration: BoxDecoration(
-        color: Color.fromRGBO(53, 53, 53, 1.0),
-            borderRadius: BorderRadius.circular(10)
-      ),
-      child: DropdownButton(
+   return CustomDropdownButton(values:
+       const [
+       'Zain Web station',
+       'AbdWidgetStation'
+       ], width: _devicewidth);
 
-        value: _items.first,
-        onChanged: (_){},
-        items: _items.map((e) {
-          return DropdownMenuItem(
-            child: Text(e),
-            value: e,
-
-          );
-        }).toList(),
-        underline: Container(),
-        dropdownColor: const Color.fromRGBO(53, 53, 53, 1.0),
-        style: TextStyle(color: Colors.white,
-        ),
-
-      ),
-    );
+  }
+  Widget _travelerinfromationwidget()
+  {
+    return CustomDropdownButton(values:
+    const [
+      '1',
+      '2',
+      '3',
+    ], width: _devicewidth * 0.45);
   }
 
 
