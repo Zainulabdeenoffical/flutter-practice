@@ -21,10 +21,7 @@ class Home extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         mainAxisSize: MainAxisSize.max,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          _pageTitle(),
-         _bookRiderWidget()
-        ],
+        children: [_pageTitle(), _bookRiderWidget()],
       ),
     )));
   }
@@ -39,6 +36,8 @@ class Home extends StatelessWidget {
 
   Widget _austroimagewidget() {
     return Container(
+       height:  _deviceHeight *  0.50,
+       width: _devicewidth * 0.56,
       decoration: const BoxDecoration(
         image: DecorationImage(
           fit: BoxFit.fill,
@@ -49,17 +48,23 @@ class Home extends StatelessWidget {
   }
 
   Widget _bookRiderWidget() {
-    return Container(
+    return  Container(
       height: _deviceHeight * 0.25,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        mainAxisSize: MainAxisSize.max,
-        crossAxisAlignment: CrossAxisAlignment.center,
+      child: Stack(children:
+      [
+        Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisSize: MainAxisSize.max,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             _dropdownwediget(),
             _travelerinfromationwidget(),
+            _ridebutton()
           ],
+        ),
 
+        Align(alignment: Alignment.centerRight,child: _austroimagewidget(),)
+      ],
       ),
     );
   }
@@ -85,6 +90,25 @@ class Home extends StatelessWidget {
             values: const ['Economy', 'Business', 'First', 'private'],
             width: _devicewidth * 0.40),
       ],
+    );
+  }
+
+  Widget _ridebutton() {
+    return Container(
+      margin: EdgeInsets.only(bottom: _deviceHeight * 0.01),
+      width: _devicewidth,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(10)
+      ),
+      child: MaterialButton(
+        onPressed: () {},
+        child: Text(
+          'Book Ride',
+          style: TextStyle(color: Colors.black),
+
+        ),
+      ),
     );
   }
 }
