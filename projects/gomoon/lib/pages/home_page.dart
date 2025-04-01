@@ -23,8 +23,7 @@ class Home extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           _pageTitle(),
-          _dropdownwediget(),
-          _travelerinfromationwidget()
+         _bookRiderWidget()
         ],
       ),
     )));
@@ -49,23 +48,43 @@ class Home extends StatelessWidget {
     );
   }
 
+  Widget _bookRiderWidget() {
+    return Container(
+      height: _deviceHeight * 0.25,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisSize: MainAxisSize.max,
+        crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            _dropdownwediget(),
+            _travelerinfromationwidget(),
+          ],
+
+      ),
+    );
+  }
+
   Widget _dropdownwediget() {
-   return CustomDropdownButton(values:
-       const [
-       'Zain Web station',
-       'AbdWidgetStation'
-       ], width: _devicewidth);
-
-  }
-  Widget _travelerinfromationwidget()
-  {
-    return CustomDropdownButton(values:
-    const [
-      '1',
-      '2',
-      '3',
-    ], width: _devicewidth * 0.45);
+    return CustomDropdownButton(
+        values: const ['Zain Web station', 'AbdWidgetStation'],
+        width: _devicewidth);
   }
 
-
+  Widget _travelerinfromationwidget() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisSize: MainAxisSize.max,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        CustomDropdownButton(values: const [
+          '1',
+          '2',
+          '3',
+        ], width: _devicewidth * 0.45),
+        CustomDropdownButton(
+            values: const ['Economy', 'Business', 'First', 'private'],
+            width: _devicewidth * 0.40),
+      ],
+    );
+  }
 }
