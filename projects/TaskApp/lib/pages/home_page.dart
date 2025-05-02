@@ -20,6 +20,23 @@ class _HomePageState extends State<HomePage> {
         toolbarHeight: _deviceHeight  * 0.15,
         title: Text('Task App',style: TextStyle(fontSize: 25),),
       ),
+      body: _taskList(),
+    );
+  }
+  Widget _taskList(){
+    return ListView(
+      children: [
+        ListTile(
+          title: Text("Do Laundary",style: TextStyle(decoration: TextDecoration.lineThrough,),
+          ),
+    subtitle: Text(DateTime.now().toString()),
+          trailing: Icon(Icons.check_box_outlined,
+          color: Colors.red)
+          ,
+
+        )
+        
+      ],
     );
   }
 }
