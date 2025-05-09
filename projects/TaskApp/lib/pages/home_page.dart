@@ -21,6 +21,7 @@ class _HomePageState extends State<HomePage> {
         title: Text('Task App',style: TextStyle(fontSize: 25),),
       ),
       body: _taskList(),
+      floatingActionButton:TaskAddActionButoon() ,
     );
   }
   Widget _taskList(){
@@ -38,5 +39,10 @@ class _HomePageState extends State<HomePage> {
         
       ],
     );
+  }
+  Widget  TaskAddActionButoon(){
+    return FloatingActionButton(onPressed: (){},
+    child:Icon(Icons.add),);
+
   }
 }
