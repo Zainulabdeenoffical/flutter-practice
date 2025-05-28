@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "42585419700",
+    "project_id": "scan2pdf-c49fc",
+    "storage_bucket": "scan2pdf-c49fc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:42585419700:android:d72480411dabbe647e0ce1",
+        "android_client_info": {
+          "package_name": "com.example.sacn2pdf"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFpJJpxr6nH_fuNqbmX7rd4GzQlhlC5Fw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
